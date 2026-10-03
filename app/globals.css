@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Subtle grid pattern used behind hero sections */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Tilted banner used on the homepage hero */
+.tilted-panel {
+  transform: rotate(-3deg);
+}
+
+.tilted-photo {
+  transform: rotate(3deg);
+}
+
+@media (max-width: 768px) {
+  .tilted-panel,
+  .tilted-photo {
+    transform: none;
+  }
+}
